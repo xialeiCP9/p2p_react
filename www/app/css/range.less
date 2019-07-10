@@ -1,0 +1,108 @@
+@rangeHeight: 10px;
+.range{
+	box-sizing: content-box;
+	padding: 50px 30px 30px;
+	.range-area{
+		position: relative;
+		height: @rangeHeight;
+		background-color: rgba(25,25,25,.5);
+		border-radius: 4px;
+		margin-left: 20px;
+		margin-bottom: 15px;
+		.scaleline{
+			position: absolute;
+			width: 100%;
+			top: @rangeHeight;
+			left: 0;
+			i{
+				position: relative;
+				display: inline-block;
+				width: 1px;
+				height: 6px;
+				background-color: red;
+				&:nth-child(5n+1){
+					height: 12px;
+				}
+				span{
+					display: block;
+					position: absolute;
+					left: 50%;
+					top: 10px;
+					transform: translate(-50%,0);
+					text-align: center;
+					color: #2e2e2e;
+					font-size: 12px;
+				}
+			}
+		}
+		.leftSlide,.rightSlide{
+			position: absolute;
+			width: 6px;
+			height: @rangeHeight + 10px;
+			top: -5px;
+		}
+		.leftSlide{
+			background-color: blue;
+		}
+		.rightSlide{
+			background-color: red;
+		}
+		.select-range-area{
+			position: absolute;
+			height: @rangeHeight;
+			top: 0;
+			background-color: yellow;
+		}
+		.bubble{
+			position: absolute;
+			top: -45px;
+			height: 30px;
+			left: -10px;
+			background-color: lightgreen;
+			text-align: center;
+			line-height: 30px;
+			border-radius: 5px;
+			font-family: "Microsoft YaHei";
+			font-size: 14px;
+			&::before{
+				content: "";
+				position: absolute;
+				display: block;
+				width: 0;
+				height: 0;
+				border-top: 6px solid transparent;
+				border-left: 6px solid transparent;
+				border-right: 6px solid lightgreen;
+				border-bottom: 6px solid lightgreen;
+				left: 35px;
+				transform: rotate(45deg);
+				bottom: -6px;
+			}
+		}
+		.bubbleMerge{
+			position: absolute;
+			top: -45px;
+			height: 30px;
+			left: -10px;
+			background-color: lightgreen;
+			text-align: center;
+			line-height: 30px;
+			border-radius: 5px;
+			font-family: "Microsoft YaHei";
+			font-size: 14px;
+			i{
+				position: absolute;
+				display: block;
+				width: 0;
+				height: 0;
+				border-top: 6px solid transparent;
+				border-left: 6px solid transparent;
+				border-right: 6px solid lightgreen;
+				border-bottom: 6px solid lightgreen;
+				left: 35px;
+				transform: rotate(45deg);
+				bottom: -6px;
+			}
+		}
+	}
+}

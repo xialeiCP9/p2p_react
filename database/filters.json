@@ -1,0 +1,25 @@
+{
+	"filters": [
+		{
+			"title": "学校",
+			"type": "common",
+			"classify": ["南昌大学","天津大学","交通大学","师范大学","爱丁堡大学","五邑大学","肇庆大学"]
+		},
+		{
+			"title": "类型",
+			"type": "common",
+			"classify": ["3 + 0B" , "6+2B" , "12+2B" , "18+2B" , "24+2B"]
+		},
+		{
+			"title":"需要的金额",
+			"type": "range",
+			"classify": [100,4000]
+		},
+		{
+			"title": "日期",
+			"type": "calendar",
+			"classify": []
+		}
+	],
+	"nowFilters":[]
+}

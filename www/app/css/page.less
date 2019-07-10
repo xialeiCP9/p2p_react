@@ -1,0 +1,39 @@
+@pageHeight: 30px;
+.page-wrap{
+	width: 100%;
+	.pageNav{
+		list-style: none;
+		overflow: hidden;
+		li{
+			float: left;
+			margin-right: 10px;
+			text-align: center;
+			div{
+				padding: 5px 15px;
+				height: @pageHeight;
+				line-height: @pageHeight;
+				text-align: center;
+				background-color: #fff;
+				border: 1px solid #999;
+				&:hover{
+					cursor: pointer;
+					background-color: skyblue;
+				}
+			}
+			.omit{
+				border: none;
+				background-color: transparent;
+				&:hover{
+					cursor: default;
+					background-color: transparent;
+				}
+				a{
+					cursor: default;
+				}
+			}
+			.cur{
+				background-color: skyblue;
+			}
+		}
+	}
+}
